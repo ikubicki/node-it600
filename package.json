@@ -1,6 +1,6 @@
 {
   "name": "node-it600",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Salus Controls local mode SDK",
   "main": "src/index.js",
   "repository": "https://github.com/ikubicki/node-it600.git",
