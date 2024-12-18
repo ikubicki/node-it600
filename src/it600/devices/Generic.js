@@ -16,6 +16,10 @@ class Generic extends Device {
       OnlineStatus: data.sZDOInfo?.OnlineStatus_i,
     });
   }
+
+  get name() {
+    return this.DeviceName;
+  }
 }
 
 export default Generic;

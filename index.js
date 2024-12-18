@@ -17,11 +17,13 @@ async function main()
     // const deviceX = await client.send(new it600.commands.ReadDevices([device]));
     // const response = await client.send(new it600.commands.ListDevices());
     // console.log(await device.setTemperature(30));
+    console.log(device.name)
     console.log(device.isRunning)
     console.log(device.currentTemperature)
     console.log(device.temperature)
     console.log(device.humidity)
     console.log(device.mode)
+    
 
     //console.log(device.modes.OFF)
     //console.log(await device.setMode(device.modes.AUTO));
