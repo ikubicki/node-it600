@@ -1,8 +1,5 @@
 import Gateway from "./Gateway.js";
 
-class UGE600 extends Gateway
-{
+class UGE600 extends Gateway {}
 
-}
-
-export default UGE600
+export default UGE600;

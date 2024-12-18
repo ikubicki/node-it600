@@ -1,16 +1,13 @@
 import SQ610 from "./SQ610.js";
 
-class SQ610RF extends SQ610
-{
+class SQ610RF extends SQ610 {
+  BatteryLevel;
 
-    BatteryLevel
-
-    static from({ client, data })
-    {
-        return super.from({ client, data }).import({
-            BatteryLevel: data.sIT600TH.BatteryLevel,
-        })
-    }
+  static from({ client, data }) {
+    return super.from({ client, data }).import({
+      BatteryLevel: data.sIT600TH.BatteryLevel,
+    });
+  }
 }
 
-export default SQ610RF
+export default SQ610RF;

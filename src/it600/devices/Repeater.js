@@ -1,8 +1,5 @@
 import Generic from "./Generic.js";
 
-class Repeater extends Generic
-{
+class Repeater extends Generic {}
 
-}
-
-export default Repeater
+export default Repeater;

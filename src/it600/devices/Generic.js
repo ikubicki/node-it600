@@ -1,24 +1,21 @@
 import Device from "../device.js";
 
-class Generic extends Device
-{
+class Generic extends Device {
+  ModelIdentifier;
+  DeviceName;
+  FirmwareVersion;
+  MACAddress;
+  OnlineStatus;
 
-    ModelIdentifier
-    DeviceName
-    FirmwareVersion
-    MACAddress
-    OnlineStatus
-
-    static from({ client, data })
-    {
-        return super.from({ client, data }).import({
-            ModelIdentifier: data.sBasicS?.ModelIdentifier || 'Generic',
-            DeviceName: JSON.parse(data.sZDO?.DeviceName || '{}')?.deviceName,
-            FirmwareVersion: data.sZDO?.FirmwareVersion,
-            MACAddress: data.sZDO?.MACAddress,
-            OnlineStatus: data.sZDOInfo?.OnlineStatus_i,
-        })
-    }
+  static from({ client, data }) {
+    return super.from({ client, data }).import({
+      ModelIdentifier: data.sBasicS?.ModelIdentifier || "Generic",
+      DeviceName: JSON.parse(data.sZDO?.DeviceName || "{}")?.deviceName,
+      FirmwareVersion: data.sZDO?.FirmwareVersion,
+      MACAddress: data.sZDO?.MACAddress,
+      OnlineStatus: data.sZDOInfo?.OnlineStatus_i,
+    });
+  }
 }
 
-export default Generic
+export default Generic;

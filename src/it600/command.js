@@ -1,44 +1,40 @@
-export const READ_ENDPOINT = '/deviceid/read';
-export const WRITE_ENDPOINT = '/deviceid/write';
+export const READ_ENDPOINT = "/deviceid/read";
+export const WRITE_ENDPOINT = "/deviceid/write";
 
-class Command
-{
-    endpoint = READ_ENDPOINT
-    parameters = {}
-    
-    constructor(endpoint = READ_ENDPOINT, parameters = {})
-    {
-        this.endpoint = endpoint
-        this.parameters = parameters
-    }
+class Command {
+  endpoint = READ_ENDPOINT;
+  parameters = {};
 
-    getEndpoint()
-    {
-        return this.endpoint
-    }
+  constructor(endpoint = READ_ENDPOINT, parameters = {}) {
+    this.endpoint = endpoint;
+    this.parameters = parameters;
+  }
 
-    getParameters()
-    {
-        return this.parameters
-    }
+  getEndpoint() {
+    return this.endpoint;
+  }
 
-    getEncryptedParameters(client)
-    {
-        let body = JSON.stringify(this.parameters)
-        if (client.crypter) {
-            body = client.crypter.encrypt(body)
-        }
-        return body
-    }
+  getParameters() {
+    return this.parameters;
+  }
 
-    async handleEncryptedResponse(client, response)
-    {
-        if (client.crypter) {
-            const data = client.crypter.decrypt(Buffer.from(await response.arrayBuffer()))
-            return JSON.parse(data)
-        }
-        return await response.toJson()
+  getEncryptedParameters(client) {
+    let body = JSON.stringify(this.parameters);
+    if (client.crypter) {
+      body = client.crypter.encrypt(body);
     }
+    return body;
+  }
+
+  async handleEncryptedResponse(client, response) {
+    if (client.crypter) {
+      const data = client.crypter.decrypt(
+        Buffer.from(await response.arrayBuffer()),
+      );
+      return JSON.parse(data);
+    }
+    return await response.toJson();
+  }
 }
 
-export default Command
+export default Command;

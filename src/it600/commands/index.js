@@ -1,4 +1,4 @@
-import GetDevice from "./GetDevice.js"
+import GetDevice from "./GetDevice.js";
 import ListDevices from "./ListDevices.js";
 import Lock from "./Lock.js";
 import MoveToLevel from "./MoveToLevel.js";
@@ -9,13 +9,13 @@ import SetHoldType from "./SetHoldType.js";
 import Switch from "./Switch.js";
 
 export default {
-    GetDevice,
-    ListDevices,
-    Lock,
-    MoveToLevel,
-    ReadDevices,
-    SetFanMode,
-    SetHeatingSetpoint,
-    SetHoldType,
-    Switch,
-}
+  GetDevice,
+  ListDevices,
+  Lock,
+  MoveToLevel,
+  ReadDevices,
+  SetFanMode,
+  SetHeatingSetpoint,
+  SetHoldType,
+  Switch,
+};

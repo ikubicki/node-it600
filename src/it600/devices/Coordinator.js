@@ -1,8 +1,5 @@
 import Generic from "./Generic.js";
 
-class Coordinator extends Generic
-{
+class Coordinator extends Generic {}
 
-}
-
-export default Coordinator
+export default Coordinator;
