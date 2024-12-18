@@ -8,17 +8,16 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "node index.js",
+    "dev": "node tests/functional/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "cs": "prettier src --check",
     "cs:fix": "prettier src --write"
   },
-  "dependencies": {
-    "dotenv": "^16.4.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
     "globals": "^15.14.0",
     "prettier": "^3.4.2"

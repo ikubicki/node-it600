@@ -19,11 +19,11 @@ Once you will have an instance of client, you can use `send(command)` method, th
 
 ```
     const crypter = new it600.Crypter({
-        euid: process.env.SALUS_EUID
+        euid: '0000000000000000'
     })
 
     const client = new it600.Client({
-        host: process.env.SALUS_HOST,
+        host: '192.168.1.2',
         crypter,
     });
 ```

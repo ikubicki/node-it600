@@ -1,4 +1,5 @@
-import it600 from "./src/it600/index.js";
+import it600 from "../../src/index.js";
+import "dotenv/config";
 
 async function main()
 {
