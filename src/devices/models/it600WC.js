@@ -1,4 +1,4 @@
-const ControlModule = require("./ControlModule.js");
+const ControlModule = require("../ControlModule.js");
 
 class it600WC extends ControlModule {}
 

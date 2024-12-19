@@ -1,6 +1,8 @@
-const commands = require("../commands/index.js");
 const Generic = require("./Generic.js");
 const constants = require("../constants.js");
+const SetHeatingSetpoint = require("../commands/SetHeatingSetpoint.js");
+const SetHoldType = require("../commands/SetHoldType.js");
+const Lock = require("../commands/Lock.js");
 
 class Thermostat extends Generic {
   modes = constants.holdtype;
@@ -34,7 +36,7 @@ class Thermostat extends Generic {
   }
 
   get isRunning() {
-    return this.RunningState > 0;
+    return this.RunningState === 1;
   }
 
   get temperature() {
@@ -54,17 +56,15 @@ class Thermostat extends Generic {
   }
 
   async setLock(lockValue) {
-    return this._client.send(new commands.Lock(this, lockValue));
+    return this._client.send(new Lock(this, lockValue));
   }
 
   async setTemperature(temperatureValue) {
-    return this._client.send(
-      new commands.SetHeatingSetpoint(this, temperatureValue),
-    );
+    return this._client.send(new SetHeatingSetpoint(this, temperatureValue));
   }
 
   async setMode(modeValue) {
-    return this._client.send(new commands.SetHoldType(this, modeValue));
+    return this._client.send(new SetHoldType(this, modeValue));
   }
 }
 

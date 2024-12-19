@@ -1,9 +1,9 @@
-const commands = require("../commands/index.js");
 const Generic = require("./Generic.js");
+const SwitchCommand = require("../commands/Switch");
 
 class Switch extends Generic {
   async switch(onOffValue) {
-    return this._client.send(new commands.Switch(this, onOffValue));
+    return this._client.send(new SwitchCommand(this, onOffValue));
   }
 
   async switchOn() {

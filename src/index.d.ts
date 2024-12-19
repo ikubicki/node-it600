@@ -1,16 +1,20 @@
-export declare class Client {
-  constructor(host: string, crypter?: any, port?: number): void;
-  public async send(command: Command): Promise<any>;
-}
-
 export declare class Crypter {
-  constructor(euid: string);
+  constructor(euid: string): void;
   public encrypt(plainText: string): Buffer;
   public decrypt(cipherText: string): string;
 }
 
+export declare class Client {
+  constructor(
+    host: string,
+    crypter?: Crypter | undefined,
+    port?: number | undefined,
+  ): void;
+  public async send(command: Command): Promise<any>;
+}
+
 export declare class Command {
-  constructor();
+  constructor(): void;
   public getEndpoint(): string;
   public getParameters(): any;
   public getEncryptedParameters(client: Client): string;
@@ -19,14 +23,20 @@ export declare class Command {
 
 export declare const Client: Client;
 export declare const Crypter: Crypter;
+
 export declare const commands: {
-  GetDevice: Command;
+  GetDevice: any;
   ListDevices: any;
-  Lock: Command;
-  MoveToLevel: Command;
-  ReadDevices: Command;
-  SetFanMode: Command;
-  SetHeatingSetpoint: Command;
-  SetHoldType: Command;
-  Switch: Command;
+  ReadDevices: any;
+};
+
+export declare const devices: {
+  Generic: any;
+  ControlModule: any;
+  Gateway: any;
+  Repeater: any;
+  Switch: any;
+  Thermostat: any;
+  models: any;
+  from({ client: Client, data: any }): any;
 };

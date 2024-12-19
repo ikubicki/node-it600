@@ -1,4 +1,4 @@
-const Coordinator = require("./Coordinator.js");
+const Coordinator = require("../Coordinator.js");
 
 class SAU2AG1ZC extends Coordinator {}
 

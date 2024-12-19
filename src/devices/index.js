@@ -1,19 +1,34 @@
+const ControlModule = require("./ControlModule.js");
+const Coordinator = require("./Coordinator.js");
+const Gateway = require("./Gateway.js");
 const Generic = require("./Generic.js");
-const it600Repeater = require("./it600Repeater.js");
-const it600WC = require("./it600WC.js");
-const SAU2AG1ZC = require("./SAU2AG1ZC.js");
-const SQ610 = require("./SQ610.js");
-const SQ610RF = require("./SQ610RF.js");
-const UGE600 = require("./UGE600.js");
+const Repeater = require("./Repeater.js");
+const Switch = require("./Switch.js");
+const Thermostat = require("./Thermostat");
+
+const it600Repeater = require("./models/it600Repeater.js");
+const it600WC = require("./models/it600WC.js");
+const SAU2AG1ZC = require("./models/SAU2AG1ZC.js");
+const SQ610 = require("./models/SQ610.js");
+const SQ610RF = require("./models/SQ610RF.js");
+const UGE600 = require("./models/UGE600.js");
 
 const devices = {
+  ControlModule,
+  Coordinator,
+  Gateway,
   Generic,
-  it600Repeater,
-  it600WC,
-  SAU2AG1ZC,
-  SQ610,
-  SQ610RF,
-  UGE600,
+  Repeater,
+  Switch,
+  Thermostat,
+  models: {
+    it600Repeater,
+    it600WC,
+    SAU2AG1ZC,
+    SQ610,
+    SQ610RF,
+    UGE600,
+  },
   from({ client, data }) {
     const model = (
       data.sBasicS?.ModelIdentifier ||
@@ -22,7 +37,7 @@ const devices = {
     )
       .split("-")
       .join("");
-    return (devices[model] || devices.Generic).from({ client, data });
+    return (devices.models[model] || devices.Generic).from({ client, data });
   },
 };
 module.exports = devices;

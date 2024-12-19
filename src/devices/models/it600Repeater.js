@@ -1,4 +1,4 @@
-const Repeater = require("./Repeater.js");
+const Repeater = require("../Repeater.js");
 
 class it600Repeater extends Repeater {}
 

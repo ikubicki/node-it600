@@ -1,19 +1,18 @@
 {
   "name": "node-it600",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Salus Controls local mode SDK",
   "main": "src/index.js",
   "repository": "https://github.com/ikubicki/node-it600.git",
   "author": "Irek Kubicki <github@ixdude.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node tests/functional/index.js",
+    "dev": "node --trace-warnings tests/functional/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "cs": "prettier src --check",
     "cs:fix": "prettier src --write"
   },
-  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "dotenv": "^16.4.7",

@@ -11,13 +11,13 @@ async function main()
     const device = await client.send(new it600.commands.GetDevice(process.env.SALUS_DEV_DEVICE));
     // const deviceX = await client.send(new it600.commands.ReadDevices([device]));
     // const response = await client.send(new it600.commands.ListDevices());
-    // console.log(await device.setTemperature(30));
-    console.log(device.name)
-    console.log(device.isRunning)
-    console.log(device.currentTemperature)
-    console.log(device.temperature)
-    console.log(device.humidity)
-    console.log(device.mode)
+    // console.log(await device.setTemperature(21));
+    console.log('name:', device.name)
+    console.log('isRunning:', device.isRunning)
+    console.log('currentTemperature:', device.currentTemperature)
+    console.log('temperature:', device.temperature)
+    console.log('humidity:', device.humidity)
+    console.log('mode:', device.mode)
     
 
     //console.log(device.modes.OFF)

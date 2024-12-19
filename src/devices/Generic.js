@@ -20,6 +20,14 @@ class Generic extends Device {
   get name() {
     return this.DeviceName;
   }
+
+  get model() {
+    return this.ModelIdentifier;
+  }
+
+  get isOnline() {
+    return this.OnlineStatus === 1;
+  }
 }
 
 module.exports = Generic;

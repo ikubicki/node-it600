@@ -1,4 +1,4 @@
-const Gateway = require("./Gateway.js");
+const Gateway = require("../Gateway.js");
 
 class UGE600 extends Gateway {}
 
