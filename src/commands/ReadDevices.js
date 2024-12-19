@@ -1,12 +1,12 @@
-import Command, { READ_ENDPOINT } from "../command.js";
-import devices from "../devices/index.js";
+const Command = require("../command.js");
+const devices = require("../devices/index.js");
 
-export default class ReadDevices extends Command {
+class ReadDevices extends Command {
   constructor(devices) {
     if (!Array.isArray(devices)) {
       devices = [devices];
     }
-    super(READ_ENDPOINT, {
+    super(Command.READ_ENDPOINT, {
       requestAttr: "deviceid",
       id: devices.map((device) => {
         if (device.ident) {
@@ -25,3 +25,5 @@ export default class ReadDevices extends Command {
     });
   }
 }
+
+module.exports = ReadDevices;

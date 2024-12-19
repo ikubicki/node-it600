@@ -1,5 +1,5 @@
-import ControlModule from "./ControlModule.js";
+const ControlModule = require("./ControlModule.js");
 
 class it600WC extends ControlModule {}
 
-export default it600WC;
+module.exports = it600WC;

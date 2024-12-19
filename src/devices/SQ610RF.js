@@ -1,4 +1,4 @@
-import SQ610 from "./SQ610.js";
+const SQ610 = require("./SQ610.js");
 
 class SQ610RF extends SQ610 {
   BatteryLevel;
@@ -10,4 +10,4 @@ class SQ610RF extends SQ610 {
   }
 }
 
-export default SQ610RF;
+module.exports = SQ610RF;

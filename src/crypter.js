@@ -1,4 +1,4 @@
-import crypto from "crypto";
+const crypto = require("crypto");
 
 class Crypter {
   static iv = Buffer.from([
@@ -51,4 +51,4 @@ class Crypter {
   }
 }
 
-export default Crypter;
+module.exports = Crypter;

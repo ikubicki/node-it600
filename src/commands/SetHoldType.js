@@ -1,8 +1,8 @@
-import Command, { WRITE_ENDPOINT } from "../command.js";
+const Command = require("../command.js");
 
-export default class SetHoldType extends Command {
+class SetHoldType extends Command {
   constructor(device, holdTypeValue) {
-    super(WRITE_ENDPOINT, {
+    super(Command.WRITE_ENDPOINT, {
       requestAttr: "write",
       id: [
         {
@@ -21,3 +21,5 @@ export default class SetHoldType extends Command {
       .then((result) => result.status === "success");
   }
 }
+
+module.exports = SetHoldType;

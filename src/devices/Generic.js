@@ -1,4 +1,4 @@
-import Device from "../device.js";
+const Device = require("../device.js");
 
 class Generic extends Device {
   ModelIdentifier;
@@ -22,4 +22,4 @@ class Generic extends Device {
   }
 }
 
-export default Generic;
+module.exports = Generic;

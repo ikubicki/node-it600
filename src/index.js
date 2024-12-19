@@ -1,9 +1,9 @@
-import Client from "./client.js";
-import commands from "./commands/index.js";
-import Crypter from "./crypter.js";
-import Device from "./device.js";
+const Client = require("./client.js");
+const commands = require("./commands/index.js");
+const Crypter = require("./crypter.js");
+const Device = require("./device.js");
 
-export default {
+module.exports = {
   Client,
   Crypter,
   Device,

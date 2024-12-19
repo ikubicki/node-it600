@@ -1,8 +1,8 @@
-import Command, { WRITE_ENDPOINT } from "../command.js";
+const Command = require("../command.js");
 
-export default class Switch extends Command {
+class Switch extends Command {
   constructor(device, switchValue) {
-    super(WRITE_ENDPOINT, {
+    super(Command.WRITE_ENDPOINT, {
       requestAttr: "write",
       id: [
         {
@@ -15,3 +15,5 @@ export default class Switch extends Command {
     });
   }
 }
+
+module.exports = Switch;

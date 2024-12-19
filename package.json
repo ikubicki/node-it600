@@ -6,7 +6,6 @@
   "repository": "https://github.com/ikubicki/node-it600.git",
   "author": "Irek Kubicki <github@ixdude.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "dev": "node tests/functional/index.js",
     "lint": "eslint",

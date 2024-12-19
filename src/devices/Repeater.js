@@ -1,5 +1,5 @@
-import Generic from "./Generic.js";
+const Generic = require("./Generic.js");
 
 class Repeater extends Generic {}
 
-export default Repeater;
+module.exports = Repeater;

@@ -1,4 +1,4 @@
-import Device from "../device.js";
+const Device = require("../device.js");
 
 class Gateway extends Device {
   NetworkWiFiMAC;
@@ -36,4 +36,4 @@ class Gateway extends Device {
   }
 }
 
-export default Gateway;
+module.exports = Gateway;

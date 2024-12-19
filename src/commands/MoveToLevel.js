@@ -1,8 +1,8 @@
-import Command, { WRITE_ENDPOINT } from "../command.js";
+const Command = require("../command.js");
 
-export default class MoveToLevel extends Command {
+class MoveToLevel extends Command {
   constructor(device, levelValue) {
-    super(WRITE_ENDPOINT, {
+    super(Command.WRITE_ENDPOINT, {
       requestAttr: "write",
       id: [
         {
@@ -15,3 +15,5 @@ export default class MoveToLevel extends Command {
     });
   }
 }
+
+module.exports = MoveToLevel;

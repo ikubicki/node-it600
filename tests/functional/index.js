@@ -1,9 +1,8 @@
-import it600 from "../../src/index.js";
-import "dotenv/config";
+const it600 = require("../../src/index.js");
+require('dotenv').config()
 
 async function main()
 {
-
     const crypter = new it600.Crypter({
         euid: process.env.SALUS_EUID
     })

@@ -1,5 +1,5 @@
-import Generic from "./Generic.js";
+const Generic = require("./Generic.js");
 
 class ControlModule extends Generic {}
 
-export default ControlModule;
+module.exports = ControlModule;

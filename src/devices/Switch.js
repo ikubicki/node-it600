@@ -1,5 +1,5 @@
-import commands from "../commands/index.js";
-import Generic from "./Generic.js";
+const commands = require("../commands/index.js");
+const Generic = require("./Generic.js");
 
 class Switch extends Generic {
   async switch(onOffValue) {
@@ -15,4 +15,4 @@ class Switch extends Generic {
   }
 }
 
-export default Switch;
+module.exports = Switch;

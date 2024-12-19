@@ -1,11 +1,11 @@
-export const READ_ENDPOINT = "/deviceid/read";
-export const WRITE_ENDPOINT = "/deviceid/write";
-
 class Command {
-  endpoint = READ_ENDPOINT;
+  static READ_ENDPOINT = "/deviceid/read";
+  static WRITE_ENDPOINT = "/deviceid/write";
+
+  endpoint = Command.READ_ENDPOINT;
   parameters = {};
 
-  constructor(endpoint = READ_ENDPOINT, parameters = {}) {
+  constructor(endpoint = Command.READ_ENDPOINT, parameters = {}) {
     this.endpoint = endpoint;
     this.parameters = parameters;
   }
@@ -37,4 +37,4 @@ class Command {
   }
 }
 
-export default Command;
+module.exports = Command;

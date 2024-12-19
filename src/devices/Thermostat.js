@@ -1,6 +1,6 @@
-import commands from "../commands/index.js";
-import Generic from "./Generic.js";
-import constants from "../constants.js";
+const commands = require("../commands/index.js");
+const Generic = require("./Generic.js");
+const constants = require("../constants.js");
 
 class Thermostat extends Generic {
   modes = constants.holdtype;
@@ -68,4 +68,4 @@ class Thermostat extends Generic {
   }
 }
 
-export default Thermostat;
+module.exports = Thermostat;

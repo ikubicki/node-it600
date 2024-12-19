@@ -1,6 +1,6 @@
-import Command, { WRITE_ENDPOINT } from "../command.js";
+const Command = require("../command.js");
 
-export default class SetHeatingSetpoint extends Command {
+class SetHeatingSetpoint extends Command {
   constructor(device, heatingSetpointValue) {
     if (heatingSetpointValue < 15) {
       throw new Error("SetHeatingSetpoint: value cannot be smaller than 15");
@@ -8,7 +8,7 @@ export default class SetHeatingSetpoint extends Command {
     if (heatingSetpointValue > 36) {
       throw new Error("SetHeatingSetpoint: value cannot be smaller than 36");
     }
-    super(WRITE_ENDPOINT, {
+    super(Command.WRITE_ENDPOINT, {
       requestAttr: "write",
       id: [
         {
@@ -28,3 +28,5 @@ export default class SetHeatingSetpoint extends Command {
       .then((result) => result.status === "success");
   }
 }
+
+module.exports = SetHeatingSetpoint;

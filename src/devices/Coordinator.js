@@ -1,5 +1,5 @@
-import Generic from "./Generic.js";
+const Generic = require("./Generic.js");
 
 class Coordinator extends Generic {}
 
-export default Coordinator;
+module.exports = Coordinator;

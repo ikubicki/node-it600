@@ -1,8 +1,8 @@
-import Command, { WRITE_ENDPOINT } from "../command.js";
+const Command = require("../command.js");
 
-export default class Lock extends Command {
+class Lock extends Command {
   constructor(device, lockValue) {
-    super(WRITE_ENDPOINT, {
+    super(Command.WRITE_ENDPOINT, {
       requestAttr: "write",
       id: [
         {
@@ -15,3 +15,5 @@ export default class Lock extends Command {
     });
   }
 }
+
+module.exports = Lock;

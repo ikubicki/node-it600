@@ -1,10 +1,10 @@
-import Generic from "./Generic.js";
-import it600Repeater from "./it600Repeater.js";
-import it600WC from "./it600WC.js";
-import SAU2AG1ZC from "./SAU2AG1ZC.js";
-import SQ610 from "./SQ610.js";
-import SQ610RF from "./SQ610RF.js";
-import UGE600 from "./UGE600.js";
+const Generic = require("./Generic.js");
+const it600Repeater = require("./it600Repeater.js");
+const it600WC = require("./it600WC.js");
+const SAU2AG1ZC = require("./SAU2AG1ZC.js");
+const SQ610 = require("./SQ610.js");
+const SQ610RF = require("./SQ610RF.js");
+const UGE600 = require("./UGE600.js");
 
 const devices = {
   Generic,
@@ -25,4 +25,4 @@ const devices = {
     return (devices[model] || devices.Generic).from({ client, data });
   },
 };
-export default devices;
+module.exports = devices;

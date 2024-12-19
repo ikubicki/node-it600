@@ -1,5 +1,5 @@
-import Coordinator from "./Coordinator.js";
+const Coordinator = require("./Coordinator.js");
 
 class SAU2AG1ZC extends Coordinator {}
 
-export default SAU2AG1ZC;
+module.exports = SAU2AG1ZC;

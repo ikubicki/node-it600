@@ -1,14 +1,14 @@
-import GetDevice from "./GetDevice.js";
-import ListDevices from "./ListDevices.js";
-import Lock from "./Lock.js";
-import MoveToLevel from "./MoveToLevel.js";
-import ReadDevices from "./ReadDevices.js";
-import SetFanMode from "./SetFanMode.js";
-import SetHeatingSetpoint from "./SetHeatingSetpoint.js";
-import SetHoldType from "./SetHoldType.js";
-import Switch from "./Switch.js";
+const GetDevice = require("./GetDevice.js");
+const ListDevices = require("./ListDevices.js");
+const Lock = require("./Lock.js");
+const MoveToLevel = require("./MoveToLevel.js");
+const ReadDevices = require("./ReadDevices.js");
+const SetFanMode = require("./SetFanMode.js");
+const SetHeatingSetpoint = require("./SetHeatingSetpoint.js");
+const SetHoldType = require("./SetHoldType.js");
+const Switch = require("./Switch.js");
 
-export default {
+module.exports = {
   GetDevice,
   ListDevices,
   Lock,

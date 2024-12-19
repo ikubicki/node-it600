@@ -1,5 +1,5 @@
-import Repeater from "./Repeater.js";
+const Repeater = require("./Repeater.js");
 
 class it600Repeater extends Repeater {}
 
-export default it600Repeater;
+module.exports = it600Repeater;

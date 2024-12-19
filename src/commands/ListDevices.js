@@ -1,9 +1,9 @@
-import Command, { READ_ENDPOINT } from "../command.js";
-import devices from "../devices/index.js";
+const Command = require("../command.js");
+const devices = require("../devices/index.js");
 
-export default class ListDevices extends Command {
+class ListDevices extends Command {
   constructor() {
-    super(READ_ENDPOINT, {
+    super(Command.READ_ENDPOINT, {
       requestAttr: "readall",
     });
   }
@@ -16,3 +16,5 @@ export default class ListDevices extends Command {
     });
   }
 }
+
+module.exports = ListDevices;

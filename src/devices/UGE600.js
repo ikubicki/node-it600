@@ -1,5 +1,5 @@
-import Gateway from "./Gateway.js";
+const Gateway = require("./Gateway.js");
 
 class UGE600 extends Gateway {}
 
-export default UGE600;
+module.exports = UGE600;
