@@ -18,14 +18,9 @@ Once you will have an instance of client, you can use `send(command)` method, th
 #### Instantiation of the client:
 
 ```
-    const crypter = new it600.Crypter({
-        euid: '0000000000000000'
-    })
+    const crypter = new it600.Crypter('0000000000000000')
 
-    const client = new it600.Client({
-        host: '192.168.1.2',
-        crypter,
-    });
+    const client = new it600.Client('192.168.1.2', crypter);
 ```
 #### Listing devices
 

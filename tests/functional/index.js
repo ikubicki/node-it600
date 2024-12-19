@@ -3,14 +3,9 @@ require('dotenv').config()
 
 async function main()
 {
-    const crypter = new it600.Crypter({
-        euid: process.env.SALUS_EUID
-    })
+    const crypter = new it600.Crypter(process.env.SALUS_EUID);
 
-    const client = new it600.Client({
-        host: process.env.SALUS_HOST,
-        crypter,
-    });
+    const client = new it600.Client(process.env.SALUS_HOST, crypter);
 
 
     const device = await client.send(new it600.commands.GetDevice(process.env.SALUS_DEV_DEVICE));
