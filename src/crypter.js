@@ -8,7 +8,7 @@ class Crypter {
   static algo = "aes-256-cbc";
   static blockSize = 16;
 
-  constructor({ euid }) {
+  constructor(euid) {
     const key = Buffer.concat([
       crypto.createHash("md5").update(`Salus-${euid.toLowerCase()}`).digest(),
       Buffer.alloc(16),

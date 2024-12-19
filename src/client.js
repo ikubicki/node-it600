@@ -3,7 +3,7 @@ class Client {
   port;
   crypter;
 
-  constructor({ host, crypter, port = 80 }) {
+  constructor(host, crypter = null, port = 80) {
     this.host = host;
     this.port = port;
     this.crypter = crypter;
